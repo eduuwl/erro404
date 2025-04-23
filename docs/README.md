@@ -27,7 +27,7 @@ React + Vite + TypeScript
 Utilizamos o padrão Conventional Commits para manter o histórico organizado, facilitar automações e dar clareza ao que está sendo feito no projeto
 
 ### Estrutura do commit
-<tipo>: descrição curta e objetiva
+tipo: descrição curta e objetiva
 
 ### SIGNIFICADOS:
 
