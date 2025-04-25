@@ -1,3 +1,4 @@
+// src/pages/TourMap.tsx
 import React, { useRef, useState } from 'react';
 import ModalForm from '../../components/ModalForm/ModalForm';
 import FooterNav from '../../components/Footer/Footer';
@@ -14,9 +15,23 @@ const TourMap: React.FC = () => {
   };
   const closeForm = () => setFormOpen(false);
 
-  const handleSubmit = (data: any) => {
-    console.log('Dados enviados:', data);
-    closeForm();
+  const handleSubmit = async (data: any) => {
+    try {
+      const res = await fetch('http://localhost:3000/registro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error(`Status ${res.status}`);
+      const registro = await res.json();
+      console.log('Registrado:', registro);
+      alert('Entrega registrada com sucesso!');
+    } catch (err) {
+      console.error(err);
+      alert('Erro ao registrar entrega');
+    } finally {
+      closeForm();
+    }
   };
 
   return (
@@ -30,7 +45,7 @@ const TourMap: React.FC = () => {
         />
       </div>
 
-    <FooterNav onStepClick={openForm} />
+      <FooterNav onStepClick={openForm} />
 
       {formOpen && (
         <ModalForm

@@ -3,7 +3,7 @@ export interface ModalFormProps {
     onClose: () => void;
     onSubmit: (data: {
       tipo: string;
-      quantidade: number;
+      quantidadeKg: number;
       turma: string;
       curso: string;
       semestre: string;

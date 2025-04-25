@@ -15,7 +15,7 @@ const ModalForm: React.FC<ModalFormProps> = ({ tipo: initialTipo, onClose, onSub
     e.preventDefault();
     onSubmit({
       tipo,
-      quantidade: parseFloat(quantidade),
+      quantidadeKg: parseFloat(quantidade),
       turma,
       curso,
       semestre,
