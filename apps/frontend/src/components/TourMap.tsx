@@ -16,7 +16,7 @@ const TourMap: React.FC = () => {
         frameBorder="0"
         allowFullScreen
       />
-      <div className="icon-overlay">
+      {/* <div className="icon-overlay">
         <button
           className="recycle-icon aluminio"
           style={{ top: "100px", left: "200px" }}
@@ -27,7 +27,7 @@ const TourMap: React.FC = () => {
           style={{ top: "250px", left: "300px" }}
           onClick={() => handleClick("vidro")}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

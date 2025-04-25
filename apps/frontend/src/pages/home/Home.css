@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+html, body {
+  overflow: hidden;
+}
+
+.home-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.logo-text {
+  text-align: left;
+}
+
+p {
+  font-size: 1.25rem;
+  color: #164b3f;
+  margin: 0;
+  font-weight: 600;
+  margin-top: 20px;
+  font-family: "Knewave", system-ui;
+  font-weight: 10;
+  font-style: normal;
+}
+
+.recycle-icon {
+  width: 500px;
+  height: 500px;
+  margin-top: -350px;
+  margin-left: -100px;
+}
+
+.logo-area h1 {
+  font-size: 3rem;
+  color: #154734;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-map {
+  background-color: #00a79d;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 14px 40px;
+  cursor: pointer;
+  font-family: "Knewave", system-ui;
+  font-weight: 20;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.btn-map:hover,
+.btn-map:focus {
+  background-color: #008a87;
+  outline: none;
+}

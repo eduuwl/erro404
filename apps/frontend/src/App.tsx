@@ -1,11 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TourMap from "./components/TourMap";
+import Home from "./pages/home/Home";
+import Navbar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div>
-      <h1>Mapa de Coleta Seletiva - UNAMA</h1>
-      <TourMap />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mapa" element={<TourMap />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
