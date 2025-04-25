@@ -1,3 +1,6 @@
+html, body {
+  background-color: #ebebeb;
+}
 .tour-wrapper {
     position: relative;
     width: 100%;
