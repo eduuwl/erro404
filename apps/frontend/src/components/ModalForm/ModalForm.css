@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Knewave&display=swap");
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  animation: fadeIn 0.2s ease-out;
+  z-index: 101;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content button {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: "Knewave", system-ui;
+  font-weight: 1;
+}
+
+.modal-content button {
+  background-color: #2d7a46;
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.modal-content button:hover {
+  background-color: #1f5a34;
+  cursor: pointer;
+}
+
+h3 {
+  font-family: "Knewave", system-ui;
+  font-weight: 1;
+  font-style: normal;
+  color: #154734;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
