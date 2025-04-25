@@ -3,7 +3,7 @@ import { CreateRegistroDto } from '../DTOModule/create-registro.dto';
 
 @Injectable()
 export class RegistroService {
-  private registros: CreateRegistroDto[] = []; // aqui está o segredo!
+  private registros: CreateRegistroDto[] = []; 
 
   create(dto: CreateRegistroDto) {
     this.registros.push(dto);

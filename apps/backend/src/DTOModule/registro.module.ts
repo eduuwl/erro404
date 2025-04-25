@@ -4,6 +4,7 @@ import { RegistroService } from '../Service/registro.service';
 
 @Module({
   controllers: [RegistroController],
-  providers: [RegistroService]
+  providers: [RegistroService],
+  exports: [RegistroService],
 })
-export class RegistroModule {}
+export class RegistroModule {}
