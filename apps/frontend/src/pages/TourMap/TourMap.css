@@ -1,45 +1,42 @@
-html, body {
-  background-color: #ebebeb;
+.tour-map-container {
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  background: transparent;
 }
-.tour-wrapper {
-    position: fixed;
-    top: 64px;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 64px);
-    overflow: hidden;
-  }
 
-  .tour-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-  
-  .icon-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 600px;
-    pointer-events: none;
-  }
-  
-  .recycle-icon {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-    pointer-events: all;
-  }
-  
-  .recycle-icon.aluminio {
-    background-image: url('/icons/aluminio.svg');
-  }
-  
-  .recycle-icon.vidro {
-    background-image: url('/icons/vidro.svg');
-  }
-  
+.tour-wrapper {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100vw;
+  height: 84vh;
+  overflow: hidden;
+}
+
+.tour-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.recycle-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  pointer-events: all;
+}

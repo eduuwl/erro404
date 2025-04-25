@@ -1,47 +1,40 @@
-import React, { useState } from "react";
-import "./TourMap.css";
-import ModalForm from "../../components/ModalForm/ModalForm";
+import React, { useRef, useState } from 'react';
+import ModalForm from '../../components/ModalForm/ModalForm';
+import FooterNav from '../../components/Footer/Footer';
+import './TourMap.css';
 
 const TourMap: React.FC = () => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const [formOpen, setFormOpen] = useState(false);
-  const [currentTipo, setCurrentTipo] = useState<string>("");
+  const [step, setStep] = useState(0);
 
-  const openForm = (tipo: string) => {
-    setCurrentTipo(tipo);
+  const openForm = (i: number) => {
+    setStep(i);
     setFormOpen(true);
   };
   const closeForm = () => setFormOpen(false);
 
   const handleSubmit = (data: any) => {
-    console.log("Dados enviados:", data);
-    // aqui você chama sua API POST /register
+    console.log('Dados enviados:', data);
     closeForm();
   };
 
   return (
-    <div className="tour-wrapper">
-      <iframe
-        src="https://www.sphere360.com.br/tour/unama-alcindo/tour.html"
-        title="Tour Virtual UNAMA"
-        frameBorder="0"
-        allowFullScreen
-      />
-      {/* <div className="icon-overlay">
-        <button
-          className="recycle-icon aluminio"
-          style={{ top: "100px", left: "200px" }}
-          onClick={() => openForm("Alumínio")}
+    <div className="tour-map-container">
+      <div ref={wrapperRef} className="tour-wrapper">
+        <iframe
+          src="https://www.sphere360.com.br/tour/unama-alcindo/tour.html"
+          title="Tour Virtual UNAMA"
+          frameBorder="0"
+          allowFullScreen
         />
-        <button
-          className="recycle-icon vidro"
-          style={{ top: "250px", left: "300px" }}
-          onClick={() => openForm("Vidro")}
-        />
-      </div> */}
+      </div>
+
+    <FooterNav onStepClick={openForm} />
 
       {formOpen && (
         <ModalForm
-          tipo={currentTipo}
+          tipo={`Lixo ${step + 1}`}
           onClose={closeForm}
           onSubmit={handleSubmit}
         />
