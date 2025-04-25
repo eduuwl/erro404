@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import TourMap from "./components/TourMap";
-import Home from "./pages/home/Home";
+import TourMap from "./pages/TourMap/TourMap";
+import Home from "./pages/Home/Home";
 import Navbar from "./components/NavBar/NavBar";
 
 function App() {
